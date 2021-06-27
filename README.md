@@ -21,6 +21,12 @@ print(dq.update(data, "update data set A = 100"))
 dq.close()
 ```
 
+## Installation
+
+```bash
+$ pip install --upgrade dfquery
+```
+
 ## Basics
 
 ### `DFQuery`
@@ -47,8 +53,8 @@ You need to pass following parameters.
 This will return `pandas.DataFrame` as a result.
 
 ```python
-df.read(data, "select * from data where A = 1")
-df.read(data, "select * from data inner join it on data.A = it.C", resources=[it])
+dq.read(data, "select * from data where A = 1")
+dq.read(data, "select * from data inner join it on data.A = it.C", resources=[it])
 ```
 
 ### `update`
@@ -66,7 +72,7 @@ You need to pass following parameters.
 This will return `pandas.DataFrame` as a result.
 
 ```python
-df.update(data, "update data set A = 100")
+dq.update(data, "update data set A = 100")
 ```
 
 ### `execute`
